@@ -5,11 +5,11 @@ int main(void) {
 	int size,*arr,k,index,index2;
 	scanf("%d %d",&size,&k);
 	arr=(int*)malloc(size*sizeof(int));
-	for(index=1;index<=size;index++)
+	for(index=0;index<size;index++)
 	scanf("%d ",&arr[index]);
-	for(index=1;index<=size;index++)
+	for(index=0;index<size;index++)
 	{
-		for(index2=index+1;index2<=size;index2++)
+		for(index2=index+1;index2<size;index2++)
 		{
 			if(arr[index]<arr[index2])
 			{
@@ -19,7 +19,7 @@ int main(void) {
 			}
 		}
 	}
-	printf("%d ",arr[k]);
+	printf("%d",arr[k-1]);
 	
 	return 0;
 }
