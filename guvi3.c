@@ -15,14 +15,18 @@ int main(void) {
 		occurance=0;
 		for(index2=index+1;index2<=size;index2++)
 		{
-			if(arr[index2]==arr[index]&&arr[index]!=-1)
+			if(arr[index]!=-1)
 			{
-				occurance++;
-				if(occurance==1)
+			if(arr[index]==arr[index2]&&arr[index2]!=-1)
+			{
+				if(occurance==0)
 				{
 					arr2[index3++]=arr[index];
 					arr[index2]=-1;
+				occurance++;
 				}
+				arr[index2]=-1;
+			}
 			}
 			
 		}
@@ -32,7 +36,6 @@ int main(void) {
 	printf("unique");
 	else
 	{
-	
 		for(index=1;index<=size;index++)
 	{
 		for(index2=index+1;index2<=size;index2++)
@@ -52,3 +55,4 @@ int main(void) {
 	printf("%d ",arr2[index]);
 	return 0;
 }
+
