@@ -32,7 +32,7 @@ int main(void) {
 		}
 		
 	}
-	if(index3==0)
+	if(index3==1)
 	printf("unique");
 	else
 	{
