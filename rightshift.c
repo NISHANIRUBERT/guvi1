@@ -7,6 +7,10 @@ int main(void) {
 	int *arr,shift,size,index;
 	scanf("%d %d",&size,&shift);
 	arr=(int*)malloc(size*sizeof(int));
+	while(shift>=size)
+	{
+		shift-=size;
+	}
 	for(index=0;index<size;index++)
 	scanf("%d ",&arr[index]);
 	for(index=size-shift;index<size;index++)
